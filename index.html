@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="app-container">
+    <h1 class="app-title">TaskFlow</h1>
+    <div class="dashboard">
+        <h2>Hello, welcome back 👋</h2>
+        <p class="quote">“The secret of getting ahead is getting started.” – Mark Twain</p>
+        <div class="task-overview">
+          <div><strong>Total:</strong> <span id="stat-total">0</span></div>
+          <div><strong>Today:</strong> <span id="stat-today">0</span></div>
+          <div><strong>Completed:</strong> <span id="stat-completed">0</span></div>
+        </div>
+      </div>
+      <div class="section-select">
+        <label for="task-section">Section:</label>
+        <select id="task-section">
+          <option value="General">General</option>
+          <option value="College">College</option>
+          <option value="Gym">Gym</option>
+          <option value="Freelance">Freelance</option>
+        </select>
+      </div>
+
+    <div class="task-input-wrapper">
+        <div class="top-row">
+          <input type="text" id="task-input" placeholder="Add a task..." />
+          <button id="add-task"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="date-time-inputs">
+            <div class="input-with-icon">
+              <i class="fas fa-calendar-alt"></i>
+              <input type="date" id="date-input" />
+            </div>
+            <div class="input-with-icon">
+              <i class="fas fa-clock"></i>
+              <input type="time" id="time-input" />
+            </div>
+          </div>
+          <div class="priority-select">
+            <label for="priority">Priority:</label>
+            <select id="priority">
+              <option value="low">🟢 Low</option>
+              <option value="medium">🟠 Medium</option>
+              <option value="high">🔴 High</option>
+            </select>
+          </div>
+          <div class="recurring-select">
+            <label for="recurring">Repeat:</label>
+            <select id="recurring">
+              <option value="none">None</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+      </div>
+      <div class="task-stats">
+        <p>Total: <span id="stat-total">0</span></p>
+        <p>Today: <span id="stat-today">0</span></p>
+        <p>Completed: <span id="stat-completed">0</span></p>
+      </div>
+      <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="today">Today</button>
+        <button data-filter="high">High Priority</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
