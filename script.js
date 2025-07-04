@@ -168,3 +168,4 @@ function updateStats() {
     document.getElementById("stat-today").textContent = todayCount;
     document.getElementById("stat-completed").textContent = completed;
   }
+  

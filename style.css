@@ -8,11 +8,11 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    background: linear-gradient(135deg, #dbeafe, #e0f2fe);
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     padding: 2rem;
   }
@@ -57,21 +57,19 @@ body {
 }
 
 #add-task {
-  background: #4f8ef7;
-  color: #fff;
-  border: none;
-  padding: 0 1rem;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  padding: 0.9rem 1.3rem;
-  font-size: 1.3rem;
-}
-
-#add-task:hover {
-  background: #397be5;
-}
+    padding: 0 1rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  #add-task:hover {
+    background: #2563eb;
+  }
 
 ul {
   list-style: none;
@@ -123,8 +121,17 @@ li.completed .task-text {
 
   #add-task {
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    justify-content: center;
   }
+
+  .top-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
 }
 .date-time-inputs {
     display: flex;
@@ -322,4 +329,13 @@ li.completed .task-text {
     margin-right: 2rem;
     display: block;
   }
-  
+  /* CANVAS BACKGROUND */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  }
