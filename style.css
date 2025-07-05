@@ -50,11 +50,26 @@ body {
   transition: border 0.2s;
   padding: 1rem 1.2rem;
   font-size: 1.05rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 #task-input:focus {
   border-color: #4f8ef7;
 }
+.task-inputs input,
+.task-inputs select,
+.task-inputs button {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+#add-task {
+    flex: 0 0 auto;
+    padding: 0 1rem;
+  }
 
 #add-task {
     padding: 0 1rem;
@@ -131,7 +146,14 @@ li.completed .task-text {
     flex-direction: column;
     gap: 0.5rem;
   }
+  #bg-canvas {
+    display: none;
+  }
 
+  body {
+    background: linear-gradient(135deg, #e0f7fa, #dbeafe);
+
+}
 }
 .date-time-inputs {
     display: flex;
